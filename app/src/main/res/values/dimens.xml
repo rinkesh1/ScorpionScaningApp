@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--Text Sizes-->
+    <dimen name="dimen_text_small">12sp</dimen>
+    <dimen name="dimen_text_medium">14sp</dimen>
+    <dimen name="dimen_text_default">16sp</dimen>
+    <dimen name="dimen_text_large">18sp</dimen>
+    <dimen name="dimen_text_xlarge">20sp</dimen>
+    <dimen name="dimen_text_xxlarge">40sp</dimen>
+
+    <dimen name="padding_layout">12sp</dimen>
+    <dimen name="register_login_radius">5sp</dimen>
+    <dimen name="default_font_medium">15sp</dimen>
+    <dimen name="dimen_card_component_specing">15sp</dimen>
+    <dimen name="dimen_btn_height">45sp</dimen>
+    <dimen name="dimen_card_corner_radius">8sp</dimen>
+    <dimen name="dimen_card_elivation_value">3sp</dimen>
+    <dimen name="app_default_text_size">18sp</dimen>
+    <dimen name="lable_and_lable">10sp</dimen>
+    <dimen name="dialog_padding">10sp</dimen>
+    <dimen name="spinner_min_height">50sp</dimen>
+
+    <dimen name="spacing_xsmall">2dp</dimen>
+    <dimen name="spacing_small">3dp</dimen>
+    <dimen name="spacing_medium">5dp</dimen>
+    <dimen name="spacing_xmedium">7dp</dimen>
+    <dimen name="spacing_middle">10dp</dimen>
+    <dimen name="spacing_large">15dp</dimen>
+    <dimen name="spacing_smlarge">18dp</dimen>
+    <dimen name="spacing_mlarge">20dp</dimen>
+    <dimen name="spacing_mxlarge">25dp</dimen>
+    <dimen name="spacing_xlarge">35dp</dimen>
+    <dimen name="spacing_xmlarge">40dp</dimen>
+    <dimen name="spacing_xxlarge">50dp</dimen>
+    <dimen name="spacing_xxxlarge">55dp</dimen>
+    <dimen name="appbar_padding_top">8dp</dimen>
+
+    <dimen name="dimen_thirty">30sp</dimen>
+    <dimen name="dimen_twelve">12sp</dimen>
+    <dimen name="dimen_thirteen">13sp</dimen>
+    <dimen name="dimen_ten">10sp</dimen>
+    <dimen name="dimen_eight">8sp</dimen>
+    <dimen name="dimen_two">2sp</dimen>
+    <dimen name="dimen_five">5sp</dimen>
+    <dimen name="dimen_three">3sp</dimen>
+    <dimen name="dimen_sixty">60sp</dimen>
+    <dimen name="dimen_seventy">70sp</dimen>
+    <dimen name="dimen_seventy_five">75sp</dimen>
+    <dimen name="dimen_two_hundred">200sp</dimen>
+    <dimen name="dimen_fifteen">15sp</dimen>
+    <dimen name="dimen_twenty">20sp</dimen>
+    <dimen name="dimen_eighteen">18sp</dimen>
+    <dimen name="dimen_sixteen">16sp</dimen>
+    <dimen name="dimen_twenty_five">25sp</dimen>
+    <dimen name="dimen_forty">40sp</dimen>
+    <dimen name="dimen_forty_five">45sp</dimen>
+    <dimen name="dimen_one">1sp</dimen>
+    <dimen name="dimen_Twenty">20sp</dimen>
+    <dimen name="dimen_fifty">50sp</dimen>
+    <dimen name="dimen_seven">7sp</dimen>
+    <dimen name="dimen_fourteen">14sp</dimen>
+    <dimen name="material_component_dialogs_padding_between_title_and_body_text">20sp</dimen>
+    <dimen name="dimen_thirteen_point_five">13.5sp</dimen>
+    <dimen name="dimen_four">4sp</dimen>
+
+    <dimen name="dimen_medium">14sp</dimen>
+</resources>

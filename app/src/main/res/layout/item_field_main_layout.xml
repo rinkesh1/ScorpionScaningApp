@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rv_field_main_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="135dp"
+        android:layout_height="165dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/dimen_fifteen"
+        android:background="@drawable/field_bg"
+        android:fitsSystemWindows="true"
+        android:orientation="vertical"
+        tools:ignore="UselessParent">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="125dp"
+            android:layout_height="125dp"
+            android:layout_gravity="center"
+            android:fitsSystemWindows="true"
+            android:foreground="?android:attr/selectableItemBackground"
+            app:cardCornerRadius="65dp">
+
+            <ImageView
+                android:id="@+id/iv_fieldImage"
+                android:layout_width="130dp"
+                android:layout_height="130dp"
+                android:layout_gravity="center"
+                android:contentDescription="@string/todo"
+                android:fitsSystemWindows="true"
+                android:padding="40dp" />
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/tv_fieldName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="15dp"
+            android:fitsSystemWindows="true"
+            android:fontFamily="@font/open_sans"
+            android:gravity="center"
+            android:textColor="@color/black" />
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    android:fitsSystemWindows="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical"
+    tools:context=".activity.RegisterActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:padding="@dimen/padding_layout">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/register_login_bg"
+            android:orientation="vertical"
+            android:padding="@dimen/padding_layout"
+            tools:ignore="UselessParent">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_gravity="center_horizontal"
+                android:scaleType="centerInside"
+                android:src="@drawable/velocitylogo" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                style="@style/customTextView_NormalText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/open_sans_bold"
+                android:text="@string/welcome_to_velocity"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="@dimen/dimen_thirty" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                style="@style/customTextView_NormalText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/open_sans_semibold"
+                android:text="@string/thank_you_for_choosing_webxpress"
+                android:textAlignment="center"
+                android:textColor="@color/black" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                style="@style/customTextView_NormalText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_twelve"
+                android:fontFamily="@font/open_sans"
+                android:text="@string/please_enter_your_company_code_to_continue"
+                android:textAlignment="center"
+                android:textColor="@color/black" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/dimen_ten"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_registrationcode"
+                    style="@style/CustomTextInput"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dimen_card_component_specing"
+                    android:textColorHint="@color/colorHint">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_registrationcode"
+                        style="@style/customEditText"
+                        android:fontFamily="@font/open_sans"
+                        android:hint="@string/enter_registration_code"
+                        android:imeOptions="actionDone"
+                        android:imeActionLabel=""
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/colorHint" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_register"
+                    style="@style/customButton"
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="@dimen/dimen_two"
+                    android:layout_marginBottom="@dimen/dimen_five"
+                    android:background="@drawable/button_bg"
+                    android:fontFamily="@font/open_sans_semibold"
+                    android:onClick="register"
+                    android:text="@string/connect_to_your_company"
+                    android:textAllCaps="true"
+                    android:textColor="@android:color/white"
+                    tools:ignore="OnClick,UsingOnClickInXml" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/ll_need_help"
+                    style="@style/customTextView_NormalText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_ten"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:fontFamily="@font/open_sans_semibold"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:onClick="needhelp"
+                    android:text="@string/need_help"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorPrimaryDark"
+                    tools:ignore="UnusedAttribute,UsingOnClickInXml" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_progressbar"
+        android:layout_width="140dp"
+        android:layout_height="110dp"
+        android:layout_centerInParent="true"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/box_bg"
+            android:gravity="center"
+            android:orientation="vertical"
+            tools:ignore="UselessParent">
+
+            <ImageView
+                android:id="@+id/progressbar"
+                android:layout_width="100dp"
+                android:layout_height="80dp"
+                android:background="@color/transparent"
+                android:contentDescription="@string/todo"
+                android:padding="@dimen/dimen_ten"
+                android:src="@drawable/infinityloader"
+                android:visibility="visible" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center_horizontal"
+                android:text="@string/loading"
+                android:textColor="@color/material_black"
+                android:textSize="@dimen/dimen_fifteen" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

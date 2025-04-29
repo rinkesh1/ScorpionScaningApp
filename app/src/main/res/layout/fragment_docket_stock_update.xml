@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragment.DocketStockUpdateFragment">
+
+    <LinearLayout
+        android:id="@+id/Sm_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorPrimary"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/Sm_back"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:contentDescription="@string/todo"
+                    android:gravity="center_vertical"
+                    android:src="@drawable/backspace"
+                    tools:ignore="UsingOnClickInXml" />
+
+                <TextView
+                    android:id="@+id/stockUpdate_DocketNo"
+                    style="@style/customTextView_NormalText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="21dp"
+                    android:layout_toEndOf="@+id/Sm_back"
+                    android:fontFamily="@font/open_sans_semibold"
+                    android:text="100005030259"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/dimen_twenty" />
+
+            </RelativeLayout>
+
+        </androidx.appcompat.widget.Toolbar>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@drawable/layout_bg_scan"
+            android:orientation="vertical"
+            android:padding="@dimen/dialog_padding">
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/CustomTextInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dimen_three"
+                android:textColorHint="@color/colorHint">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/stockUpdate_ThcNo"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:enabled="false"
+                    android:fontFamily="@font/open_sans"
+                    android:hint="@string/thc_no_label"
+                    android:imeOptions="actionNext"
+                    android:text="VH/GGN/2122/000010"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/colorHint" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/CustomTextInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dimen_three"
+                android:textColorHint="@color/colorHint">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/stockUpdate_Package"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:enabled="false"
+                    android:fontFamily="@font/open_sans"
+                    android:hint="Packages"
+                    android:imeOptions="actionNext"
+                    android:text="11/16"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/colorHint" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/CustomTextInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dimen_three"
+                android:textColorHint="@color/colorHint">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/stockUpdate_DateOfBooking"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:enabled="false"
+                    android:fontFamily="@font/open_sans"
+                    android:hint="Booking Date"
+                    android:imeOptions="actionNext"
+                    android:text="28 Feb 2022"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/colorHint" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/CustomTextInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dimen_three"
+                android:textColorHint="@color/colorHint">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/stockUpdate_Destination"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:enabled="false"
+                    android:fontFamily="@font/open_sans"
+                    android:hint="@string/destination"
+                    android:imeOptions="actionNext"
+                    android:text="HGGN"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/colorHint" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tvAlertArrivalCondition"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_four"
+                android:hint="@string/arrival_condition"
+                app:counterTextColor="@color/black"
+                app:endIconTint="@color/black"
+                android:textColorHint="@color/colorHint"
+                android:visibility="visible"
+                app:boxStrokeColor="@color/colorHint"
+                app:boxStrokeWidth="@dimen/dimen_one"
+                app:boxStrokeWidthFocused="@dimen/dimen_one">
+
+                <AutoCompleteTextView
+                    android:id="@+id/stockUpdate_ArrivalCondition"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:focusable="false"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/open_sans"
+                    android:textSize="@dimen/dimen_sixteen" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tvAlertGoDown"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_four"
+                android:hint="@string/godown"
+                app:counterTextColor="@color/black"
+                app:endIconTint="@color/black"
+                android:textColorHint="@color/colorHint"
+                android:visibility="visible"
+                app:boxStrokeColor="@color/colorHint"
+                app:boxStrokeWidth="@dimen/dimen_one"
+                app:boxStrokeWidthFocused="@dimen/dimen_one">
+
+                <AutoCompleteTextView
+                    android:id="@+id/stockUpdate_Godown"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:focusable="false"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/open_sans"
+                    android:textSize="@dimen/dimen_sixteen" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+          <!--  <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tvDEPS"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_four"
+                android:hint="@string/DEPS"
+                android:textColorHint="@color/colorHint"
+                android:visibility="visible"
+                app:boxStrokeColor="@color/colorHint"
+                app:boxStrokeWidth="@dimen/dimen_one"
+                app:boxStrokeWidthFocused="@dimen/dimen_one">
+
+                <AutoCompleteTextView
+                    android:id="@+id/stockUpdate_DEPS"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:focusable="false"
+                    android:fontFamily="@font/open_sans"
+                    android:textSize="@dimen/dimen_sixteen" />
+
+            </com.google.android.material.textfield.TextInputLayout>-->
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tvDEPSReason"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_four"
+                android:hint="@string/delivery_type"
+                app:counterTextColor="@color/black"
+                app:endIconTint="@color/black"
+                android:textColorHint="@color/colorHint"
+                app:boxStrokeColor="@color/colorHint"
+                app:boxStrokeWidth="@dimen/dimen_one"
+                app:boxStrokeWidthFocused="@dimen/dimen_one">
+
+                <AutoCompleteTextView
+                    android:id="@+id/stockUpdate_DelivaryType"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:focusable="false"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/open_sans"
+                    android:textSize="@dimen/dimen_sixteen" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!--
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/tvPersonName"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/dimen_four"
+                                android:layout_marginBottom="@dimen/dimen_three"
+                                android:hint="@string/person_name"
+                                android:textColorHint="@color/colorHint"
+                                app:boxStrokeColor="@color/colorHint"
+                                app:boxStrokeWidth="@dimen/dimen_one"
+                                app:boxStrokeWidthFocused="@dimen/dimen_one"
+                                app:hintTextColor="@color/colorHint">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/etPersonName"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="55dp"
+                                    android:fontFamily="@font/open_sans"
+                                    android:imeOptions="actionNext"
+                                    android:textColor="@color/black"
+                                    android:textColorHint="@color/colorHint" />
+
+                            </com.google.android.material.textfield.TextInputLayout>
+            -->
+
+        </LinearLayout>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/stockUpdate_Update"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/custom_button"
+            android:fontFamily="@font/open_sans_extrabold"
+            android:gravity="center"
+            android:maxLines="1"
+            android:padding="@dimen/dimen_fifteen"
+            android:singleLine="true"
+            android:text="@string/update"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textSize="@dimen/dimen_fifteen"
+            tools:ignore="UsingOnClickInXml" />
+
+    </LinearLayout>
+
+
+</FrameLayout>

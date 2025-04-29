@@ -1,0 +1,348 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginStart="@dimen/dimen_ten"
+    android:layout_marginEnd="@dimen/dimen_ten"
+    android:background="@drawable/dialog_bg"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/dialog_padding">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:weightSum="10"
+            tools:ignore="UseCompoundDrawables">
+
+            <TextView
+                style="@style/customTextViewHeaderTwo"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/dimen_ten"
+                android:layout_weight="9.3"
+                android:fontFamily="@font/open_sans_semibold"
+                android:gravity="center"
+                android:text="@string/scan_summary"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/dimen_eighteen" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_AlertDismiss"
+                android:layout_width="0dp"
+                android:layout_height="25dp"
+                android:layout_weight="0.7"
+                android:background="@drawable/app_info_close_bg"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:padding="@dimen/dimen_two"
+                android:src="@drawable/app_info_close"
+                tools:ignore="UnusedAttribute" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_one"
+            android:layout_marginTop="@dimen/dimen_fifteen"
+            android:layout_marginBottom="@dimen/dimen_fifteen"
+            android:background="@color/colorHint" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_userid"
+            style="@style/CustomTextInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dimen_three"
+            android:textColorHint="@color/colorHint">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/priview_ThcNo"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:enabled="false"
+                android:fontFamily="@font/open_sans"
+                android:hint="@string/thc_no_label"
+                android:imeOptions="actionNext"
+                android:text="VH/GGN/2122/000010"
+                android:textColor="@color/black"
+                android:textColorHint="@color/colorHint" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/dimen_eight"
+            android:baselineAligned="false"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/CustomTextInput"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dimen_three"
+                android:textColorHint="@color/colorHint">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:id="@+id/priview_Docket"
+                    android:layout_height="55dp"
+                    android:enabled="false"
+                    android:fontFamily="@font/open_sans"
+                    android:hint="Dockets"
+                    android:imeOptions="actionNext"
+                    android:text="1/1"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/colorHint" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/CustomTextInput"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_marginLeft="@dimen/dimen_five"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dimen_three"
+                android:textColorHint="@color/colorHint">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:id="@+id/priview_Package"
+                    android:layout_height="55dp"
+                    android:enabled="false"
+                    android:fontFamily="@font/open_sans"
+                    android:hint="Packages"
+                    android:imeOptions="actionNext"
+                    android:text="4/10"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/colorHint" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </LinearLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/CustomTextInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dimen_three"
+            android:textColorHint="@color/colorHint">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/priview_DateOfBooking"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:enabled="false"
+                android:fontFamily="@font/open_sans"
+                android:hint="Booking Date"
+                android:imeOptions="actionNext"
+                android:text="28 Feb 2022"
+                android:textColor="@color/black"
+                android:textColorHint="@color/colorHint" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/CustomTextInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dimen_three"
+            android:textColorHint="@color/colorHint">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/priview_Destination"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:enabled="false"
+                android:fontFamily="@font/open_sans"
+                android:hint="@string/destination"
+                android:imeOptions="actionNext"
+                android:text="HGGN"
+                android:textColor="@color/black"
+                android:textColorHint="@color/colorHint" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tvAlertArrivalCondition"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_four"
+            android:hint="@string/arrival_condition"
+            app:counterTextColor="@color/black"
+            app:endIconTint="@color/black"
+            android:textColorHint="@color/colorHint"
+            android:visibility="visible"
+            app:boxStrokeColor="@color/colorHint"
+            app:boxStrokeWidth="@dimen/dimen_one"
+            app:boxStrokeWidthFocused="@dimen/dimen_one">
+
+            <AutoCompleteTextView
+                android:id="@+id/priview_ArrivalCondition"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:focusable="false"
+                android:fontFamily="@font/open_sans"
+                android:textSize="@dimen/dimen_sixteen" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tvAlertGoDown"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_four"
+            android:hint="@string/godown"
+            app:counterTextColor="@color/black"
+            app:endIconTint="@color/black"
+            android:textColorHint="@color/colorHint"
+            android:visibility="visible"
+            app:boxStrokeColor="@color/colorHint"
+            app:boxStrokeWidth="@dimen/dimen_one"
+            app:boxStrokeWidthFocused="@dimen/dimen_one">
+
+            <AutoCompleteTextView
+                android:id="@+id/priview_Godown"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:focusable="false"
+                android:textColor="@color/black"
+                android:fontFamily="@font/open_sans"
+                android:textSize="@dimen/dimen_sixteen" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!--<com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tvDEPS"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_four"
+            android:hint="@string/DEPS"
+            android:textColorHint="@color/colorHint"
+            android:visibility="visible"
+            app:boxStrokeColor="@color/colorHint"
+            app:boxStrokeWidth="@dimen/dimen_one"
+            app:boxStrokeWidthFocused="@dimen/dimen_one">
+
+            <AutoCompleteTextView
+                android:id="@+id/priview_DEPS"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:focusable="false"
+                android:fontFamily="@font/open_sans"
+                android:textSize="@dimen/dimen_sixteen" />
+
+        </com.google.android.material.textfield.TextInputLayout>-->
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tvDEPSType"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_four"
+            android:hint="@string/delivery_type"
+            app:counterTextColor="@color/black"
+            app:endIconTint="@color/black"
+            android:textColorHint="@color/colorHint"
+            app:boxStrokeColor="@color/colorHint"
+            app:boxStrokeWidth="@dimen/dimen_one"
+            app:boxStrokeWidthFocused="@dimen/dimen_one">
+
+            <AutoCompleteTextView
+                android:id="@+id/priview_DelivaryType"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:focusable="false"
+                android:textColor="@color/black"
+                android:fontFamily="@font/open_sans"
+                android:textSize="@dimen/dimen_sixteen" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!--
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tvPersonName"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_four"
+                    android:layout_marginBottom="@dimen/dimen_three"
+                    android:hint="@string/person_name"
+                    android:textColorHint="@color/colorHint"
+                    app:boxStrokeColor="@color/colorHint"
+                    app:boxStrokeWidth="@dimen/dimen_one"
+                    app:boxStrokeWidthFocused="@dimen/dimen_one"
+                    app:hintTextColor="@color/colorHint">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/priview_PersonName"
+                        android:layout_width="match_parent"
+                        android:layout_height="55dp"
+                        android:fontFamily="@font/open_sans"
+                        android:imeOptions="actionNext"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/colorHint" />
+
+                </com.google.android.material.textfield.TextInputLayout>-->
+
+        <LinearLayout
+            android:id="@+id/ll_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_twenty"
+            android:background="@drawable/all_corner_round_drawable"
+            android:baselineAligned="false"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/all_corner_round_drawable"
+                tools:ignore="UselessParent">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/priview_next"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:background="@drawable/button_custom"
+                    android:drawableEnd="@drawable/next"
+                    android:fontFamily="@font/open_sans_extrabold"
+                    android:gravity="center"
+                    android:maxLines="1"
+                    android:padding="@dimen/dimen_fifteen"
+                    android:singleLine="true"
+                    android:text="@string/label_next_ls_scan"
+                    android:textAllCaps="true"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/dimen_fifteen"
+                    tools:ignore="UsingOnClickInXml" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

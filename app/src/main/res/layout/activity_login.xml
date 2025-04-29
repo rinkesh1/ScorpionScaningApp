@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/colorPrimary"
+    android:fitsSystemWindows="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical"
+    tools:context=".activity.LoginActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="@dimen/padding_layout">
+
+        <LinearLayout
+            android:id="@+id/logindetail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@drawable/register_login_bg"
+            android:orientation="vertical"
+            android:paddingHorizontal="@dimen/dimen_twelve">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ll_company_logo"
+                android:layout_width="match_parent"
+                android:layout_height="65dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/dimen_ten"
+                android:scaleType="centerInside" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                style="@style/customTextView_NormalText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_five"
+                android:fontFamily="@font/open_sans_bold"
+                android:gravity="center_horizontal"
+                android:text="@string/webxpress_velocity"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="@dimen/dimen_thirty" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                style="@style/customTextView_NormalText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/open_sans_semibold"
+                android:gravity="center_horizontal"
+                android:text="@string/your_transport_manager"
+                android:textAlignment="center"
+                android:textColor="@color/black" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/dimen_ten"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_userid"
+                    style="@style/CustomTextInput"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dimen_three"
+                    android:textColorHint="@color/colorHint">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_userid"
+                        style="@style/customEditText"
+                        android:fontFamily="@font/open_sans"
+                        android:hint="@string/user_id"
+                        android:imeOptions="actionNext"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/colorHint" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_password"
+                    style="@style/CustomTextInput"
+                    app:endIconMode="password_toggle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dimen_ten"
+                    app:passwordToggleTint="@color/blue_500"
+                    android:textColorHint="@color/colorHint">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_password"
+                        style="@style/customEditText"
+                        android:fontFamily="@font/open_sans"
+                        android:hint="@string/password"
+                        android:imeOptions="actionDone"
+                        android:inputType="textPassword"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/colorHint" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_Login"
+                    style="@style/customButton"
+                    android:layout_width="match_parent"
+                    android:background="@drawable/button_bg"
+                    android:fontFamily="@font/open_sans_semibold"
+                    android:onClick="login"
+                    android:text="@string/login"
+                    android:textAllCaps="true"
+                    android:textColor="@android:color/white"
+                    tools:ignore="OnClick,UsingOnClickInXml" />
+
+                <CheckBox
+                    android:id="@+id/ll_remember_me"
+                    style="@style/customTextView_NormalText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_ten"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:fontFamily="@font/open_sans"
+                    android:text="@string/remember_me"
+                    android:textColor="@color/black" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llFooter"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_sixty"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal"
+            android:weightSum="100">
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="91"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/tv_copyrights"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:fontFamily="@font/open_sans"
+                    android:gravity="center_vertical"
+                    android:text="@string/copyright_label_pvt_ltd"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/dimen_twelve" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/iv_webxpress_logo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="@dimen/dimen_five"
+                    android:layout_marginTop="@dimen/dimen_three"
+                    android:layout_toEndOf="@+id/tv_copyrights"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:paddingEnd="@dimen/dimen_ten"
+                    android:src="@drawable/webxpress_logo_white"
+                    tools:ignore="RtlSymmetry" />
+
+            </RelativeLayout>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_app_info"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="9"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:clickable="true"
+                android:focusable="true"
+                android:onClick="appinfo"
+                android:src="@mipmap/iv_action_info"
+                tools:ignore="UsingOnClickInXml" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_progressbar"
+        android:layout_width="140dp"
+        android:layout_height="110dp"
+        android:layout_centerInParent="true"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/box_bg"
+            android:gravity="center"
+            android:orientation="vertical"
+            tools:ignore="UselessParent">
+
+            <ImageView
+                android:id="@+id/progressbar"
+                android:layout_width="100dp"
+                android:layout_height="80dp"
+                android:background="@color/transparent"
+                android:contentDescription="@string/todo"
+                android:padding="@dimen/dimen_ten"
+                android:src="@drawable/infinityloader"
+                android:visibility="visible" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center_horizontal"
+                android:text="@string/loading"
+                android:textColor="@color/material_black"
+                android:textSize="@dimen/dimen_fifteen" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

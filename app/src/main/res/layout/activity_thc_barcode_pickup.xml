@@ -1,0 +1,526 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    tools:context=".activity.THCBarcodePickupActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/rl_thc_header_main"
+            android:layout_width="match_parent"
+            android:layout_marginTop="@dimen/dimen_one"
+            android:layout_marginBottom="@dimen/dimen_one"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimary">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <!--<ImageView
+                        android:id="@+id/iv_nav_back"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dimen_five"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:contentDescription="@string/todo"
+                        android:gravity="center_vertical"
+                        android:src="@drawable/backspace"
+                        tools:ignore="UsingOnClickInXml" />
+
+                    <TextView
+                        style="@style/customDialogHeader"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dimen_twenty"
+                        android:layout_marginTop="@dimen/dimen_five"
+                        android:layout_toEndOf="@+id/iv_nav_back"
+                        android:fontFamily="@font/open_sans_semibold"
+                        android:text="@string/label_scan_thc_packages"
+                        android:textAlignment="center"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/dimen_twenty" />-->
+
+                    <ImageView
+                        android:id="@+id/iv_nav_back"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:contentDescription="@string/todo"
+                        android:gravity="center_vertical"
+                        android:src="@drawable/backspace"
+                        tools:ignore="UsingOnClickInXml" />
+
+                    <TextView
+                        style="@style/customTextView_NormalText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dimen_twenty"
+                        android:layout_toEndOf="@+id/iv_nav_back"
+                        android:fontFamily="@font/open_sans_semibold"
+                        android:text="@string/label_scan_thc_packages"
+                        android:textAlignment="center"
+                        android:textAllCaps="true"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/dimen_twenty" />
+
+                </RelativeLayout>
+
+            </androidx.appcompat.widget.Toolbar>
+
+            <RelativeLayout
+                android:id="@+id/rl_thc_header"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_gravity="center_vertical"
+                android:padding="@dimen/padding_layout">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/iv_thc_refresh"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentEnd="true"
+                    android:background="@drawable/custom_button_gray"
+                    android:src="@drawable/refresh"
+                    android:tint="@color/colorPrimaryDark"
+                    tools:ignore="UnusedAttribute" />
+
+            </RelativeLayout>
+
+            <!--<View
+                android:id="@+id/view_devider"
+                style="@style/CustomDivider"
+                android:layout_below="@+id/rl_thc_header" />-->
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/layout_bg_scan"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/ll_deliveryOption"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/dimen_ten"
+                android:layout_marginTop="@dimen/dimen_twelve"
+                android:layout_marginBottom="@dimen/dimen_five"
+                android:orientation="horizontal">
+
+                <include layout="@layout/activity_scan_tab" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_scanManually"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginTop="@dimen/dimen_ten"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <EditText
+                    android:id="@+id/edt_docketNo"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/edit_text_round_bg_white"
+                    android:fontFamily="@font/open_sans"
+                    android:hint="@string/docket_number"
+                    android:padding="7dp"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/colorHint"
+                    android:textSize="@dimen/dimen_sixteen"
+                    tools:ignore="Autofill,TextFields" />
+
+                <Button
+                    android:id="@+id/btn_scan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:backgroundTint="@color/colorPrimary"
+                    android:fontFamily="@font/open_sans_semibold"
+                    android:text="@string/Scan"
+                    android:textColor="@color/white"
+                    tools:ignore="UsingOnClickInXml" />
+
+            </LinearLayout>
+
+            <EditText
+                android:editable="false"
+                android:id="@+id/etDocketNo"
+                style="@style/customEditText"
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:textColor="@color/white"
+                android:layout_toLeftOf="@+id/btnPkgScan"
+                android:gravity="center_vertical"
+                android:hint="Barcode No"
+                android:singleLine="true" />
+
+            <com.journeyapps.barcodescanner.DecoratedBarcodeView
+                android:id="@+id/dbv_barcode"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_margin="@dimen/padding_layout">
+
+            </com.journeyapps.barcodescanner.DecoratedBarcodeView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/padding_layout"
+                android:layout_marginRight="@dimen/padding_layout"
+                android:layout_marginBottom="@dimen/padding_layout"
+                android:baselineAligned="false"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/ll_thc_pending"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:orientation="vertical"
+                    android:padding="@dimen/dimen_five"
+                    tools:ignore="UnusedAttribute">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tv_labelPending"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/open_sans_extrabold"
+                        android:gravity="center"
+                        android:text="@string/tab_pending"
+                        android:textAllCaps="true"
+                        android:textColor="@color/attempted_color"
+                        tools:ignore="NestedWeights" />
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tv_pending_dkt"
+                            style="@style/customTextNormal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/open_sans_extrabold"
+                            android:gravity="center"
+                            android:text="1"
+                            android:textAllCaps="true"
+                            android:textColor="@color/attempted_color"
+                            android:textSize="@dimen/dimen_text_medium" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            style="@style/customTextNormal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/open_sans_extrabold"
+                            android:gravity="center"
+                            android:text="|"
+                            android:textAllCaps="true"
+                            android:textColor="@color/attempted_color"
+                            android:textSize="@dimen/dimen_text_medium" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tv_pending_pkg"
+                            style="@style/customTextNormal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/open_sans_extrabold"
+                            android:gravity="center"
+                            android:text="10"
+                            android:textAllCaps="true"
+                            android:textColor="@color/attempted_color"
+                            android:textSize="@dimen/dimen_text_medium" />
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_thc_complete"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:orientation="vertical"
+                    android:padding="@dimen/dimen_five"
+                    tools:ignore="UnusedAttribute">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tv_labelComplete"
+                        style="@style/customTextNormal"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_gravity="right"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/open_sans_extrabold"
+                        android:gravity="center"
+                        android:text="@string/tab_completed"
+                        android:textAllCaps="true"
+                        android:textColor="@color/colorDeliveredTabText"
+                        android:textSize="@dimen/dimen_text_medium"
+                        tools:ignore="NestedWeights,RtlHardcoded" />
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tv_complete_dkt"
+                            style="@style/customTextNormal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/open_sans_extrabold"
+                            android:gravity="center"
+                            android:text="1"
+                            android:textAllCaps="true"
+                            android:textColor="@color/colorDeliveredTabText"
+                            android:textSize="@dimen/dimen_text_medium" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            style="@style/customTextNormal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/open_sans_extrabold"
+                            android:gravity="center"
+                            android:text="|"
+                            android:textAllCaps="true"
+                            android:textColor="@color/colorDeliveredTabText"
+                            android:textSize="@dimen/dimen_text_medium" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tv_complete_pkg"
+                            style="@style/customTextNormal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/open_sans_extrabold"
+                            android:gravity="center"
+                            android:text="4"
+                            android:textAllCaps="true"
+                            android:textColor="@color/colorDeliveredTabText"
+                            android:textSize="@dimen/dimen_text_medium" />
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_ls_extra"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:orientation="vertical"
+                    android:padding="@dimen/dimen_five"
+                    tools:ignore="UnusedAttribute">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tv_labelExtra"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/open_sans_extrabold"
+                        android:gravity="center"
+                        android:text="@string/tab_extra"
+                        android:textAllCaps="true"
+                        android:textColor="@color/attempted_color"
+                        tools:ignore="NestedWeights" />
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:visibility="gone"
+                            android:id="@+id/tv_extra_dkt"
+                            style="@style/customTextNormal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/open_sans_extrabold"
+                            android:gravity="center"
+                            android:text="0"
+                            android:textAllCaps="true"
+                            android:textColor="@color/attempted_color"
+                            android:textSize="@dimen/dimen_text_medium" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:visibility="gone"
+                            style="@style/customTextNormal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/open_sans_extrabold"
+                            android:gravity="center"
+                            android:text="|"
+                            android:textAllCaps="true"
+                            android:textColor="@color/attempted_color"
+                            android:textSize="@dimen/dimen_text_medium" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tv_extra_pkg"
+                            style="@style/customTextNormal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/open_sans_extrabold"
+                            android:gravity="center"
+                            android:text="0"
+                            android:textAllCaps="true"
+                            android:textColor="@color/attempted_color"
+                            android:textSize="@dimen/dimen_text_medium" />
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/lin_pkg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:visibility="gone">
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/customTextNormal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/open_sans_extrabold"
+                    android:text="@string/lastPkg"
+                    android:layout_weight="1"
+                    android:textColor="@color/material_black"
+                    android:textSize="@dimen/dimen_text_small"
+                    tools:ignore="NestedWeights,RtlHardcoded" />
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txtLastScanPkg"
+                    style="@style/customTextNormal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/open_sans_extrabold"
+                    android:text="@string/textcount"
+                    android:textAllCaps="true"
+                    android:layout_weight="1"
+                    android:gravity="end"
+                    android:textColor="@color/penRoyalBlue"
+                    android:textSize="12sp"
+                    tools:ignore="NestedWeights,RtlHardcoded" />
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_scannedDocket"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="@dimen/dimen_seventy_five"
+                android:background="@color/white"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:listitem="@layout/item_thc_scanned_list" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/all_corner_round_drawable"
+        android:baselineAligned="false"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            tools:ignore="UselessParent">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_thc_Save"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:background="@drawable/custom_button"
+                android:drawableStart="@drawable/check_circle"
+                android:fontFamily="@font/open_sans_extrabold"
+                android:gravity="center"
+                android:maxLines="1"
+                android:padding="@dimen/dimen_fifteen"
+                android:singleLine="true"
+                android:text="@string/label_finish_thc_scan"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textSize="@dimen/dimen_fifteen"
+                tools:ignore="UsingOnClickInXml" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_progressbar"
+        android:layout_width="140dp"
+        android:layout_height="110dp"
+        android:layout_centerInParent="true"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/box_bg"
+            android:gravity="center"
+            android:orientation="vertical"
+            tools:ignore="UselessParent">
+            <ProgressBar
+                android:id="@+id/pbHeaderProgress"
+                style="?android:attr/progressBarStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+            </ProgressBar>
+            <ImageView
+                android:id="@+id/progressbar"
+                android:layout_width="100dp"
+                android:layout_height="80dp"
+                android:background="@color/transparent"
+                android:contentDescription="@string/todo"
+                android:padding="@dimen/dimen_ten"
+                android:src="@drawable/infinityloader"
+                android:visibility="gone" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center_horizontal"
+                android:text="@string/loading"
+                android:textColor="@color/material_black"
+                android:textSize="@dimen/dimen_fifteen" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+</RelativeLayout>

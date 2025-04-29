@@ -1,0 +1,211 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name">Velocity</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!-- splash page -->
+    <string name="todo">TODO</string>
+
+    <!-- register page -->
+    <string name="welcome_to_velocity">Welcome To Velocity</string>
+    <string name="thank_you_for_choosing_webxpress">Thank you for choosing Webxpress</string>
+    <string name="please_enter_your_company_code_to_continue">Please enter your company code to continue.</string>
+    <string name="enter_registration_code">Enter registration code</string>
+    <string name="connect_to_your_company">Connect To Your Company</string>
+    <string name="need_help">NEED HELP?</string>
+
+    <!-- login page -->
+    <string name="webxpress_velocity">WebXpress Velocity</string>
+    <string name="your_transport_manager">Your Transport Manager</string>
+    <string name="user_id">User ID</string>
+    <string name="password">Password</string>
+    <string name="login">LOGIN</string>
+    <string name="remember_me">Remember me</string>
+    <string name="copyright_label_pvt_ltd">Copyright \u00a9 2022, All rights are reserved by</string>
+
+    <!-- dialog need help -->
+    <string name="selecting_a_company">Selecting a Company</string>
+    <string name="this_app_needs_to_know_the_company_you_work_for_in_order_to_complete_its_setup">This app needs to know the company you work for in order to complete its setup.</string>
+    <string name="if_you_haven_t_received_it_by_sms_ask_your_admin_team_for_a_3_6_digit_code">If you haven\'t received it by SMS, ask your admin team for a 3–6 digit code.</string>
+    <string name="note_you_cannot_search_your_company_using_its_name_for_security_reasons">Note: You cannot search your company using its name, for security reasons.</string>
+    <string name="done">DONE</string>
+    <string name="abcd">ABCD</string>
+
+    <!-- dialog app info -->
+    <string name="app_information">App Information</string>
+    <string name="velocity">Velocity</string>
+    <string name="updated_24_feb_22">Updated 24-Feb-22</string>
+    <string name="label_pvt_ltd">\u00a9 2021–22, ECFY Consulting Pvt. Ltd.</string>
+    <string name="version">Version : </string>
+    <string name="connected_company">Connected Company</string>
+    <string name="agility">agility</string>
+    <string name="disconnect">disconnect</string>
+
+    <!-- main page -->
+    <string name="home">Home</string>
+
+    <!-- outward ls list -->
+    <string name="scan_loading_sheet">SCAN LOADING SHEET</string>
+    <string name="ls_for_update">Loading Sheet for Update</string>
+
+    <!-- outward ls packages -->
+    <string name="scan_ls_packages">SCAN LS PACKAGES</string>
+    <string name="ls_packages_scan">Scan LS Packages</string>
+
+    <!-- inward thc list -->
+    <string name="scan_thc">SCAN THC</string>
+    <string name="thc_summery">THC Summary</string>
+    <string name="thc_for_stock_update">THC for Stock Update</string>
+
+    <!-- inward thc packages -->
+    <string name="scan_thc_packages">SCAN THC PACKAGES</string>
+    <string name="thc_packages_scan">Scan THC Packages</string>
+
+    <!-- item outward ls list -->
+    <string name="date">Date :</string>
+    <string name="destination">Destination :</string>
+
+    <!-- item outward ls packages -->
+    <string name="docket_date">Docket Date</string>
+    <string name="total_load_packages">Total Pkgs</string>
+    <string name="total_scanned_packages">Scan Pkgs</string>
+    <string name="ls_status">Status</string>
+
+    <string name="datawedge_intent_key_data">com.symbol.datawedge.data_string</string>
+    <string name="datawedge_intent_key_label_type">com.symbol.datawedge.label_type</string>
+
+    <!-- item inward thc packages -->
+    <string name="docket_no">Docket No</string>
+    <string name="manifest_status">Manifest Status</string>
+
+    <!-- fragment dialog navigation  -->
+    <string name="logout">LOGOUT</string>
+    <string name="velocity_app">Webxpress App</string>
+    <string name="administrator_velocity_abcweb">Administrator : Velocity : VelWeb</string>
+
+    <!-- dialog ls complete pickup -->
+    <string name="scan_summary">Scan Summary</string>
+    <string name="lsno">LS Number</string>
+    <string name="no_of_cn">No. of CN</string>
+    <string name="scanned_cn">Scanned CN</string>
+    <string name="total_pkgs">Total Pkgs</string>
+    <string name="scanned_pkgs">Scanned Pkgs</string>
+    <string name="unscanned_cn">Un-Scanned CN</string>
+    <string name="ExtraScanPkgs">Extra-Scanned Pkgs</string>
+    <string name="park_ls">Park LS</string>
+    <string name="finalize_make_MF">Finalize and make MF</string>
+
+    <!-- dialog thc complete pickup -->
+    <string name="thc_no_label">THC Number</string>
+    <string name="packages_arrived">PKS Arrived</string>
+    <string name="date_of_booking">Booking Date</string>
+    <string name="packges_weight">Packages Weight</string>
+    <string name="arrival_condition">Arrival Condition</string>
+    <string name="godown">Godown</string>
+    <string name="DEPS">DEPS</string>
+    <string name="delivery_process">Delivery Process</string>
+    <string name="delivery_type">Delivery type</string>
+    <string name="delivery_type_reason">Delivery Reason</string>
+    <string name="person_name">Person Name</string>
+    <string name="stock_update">Stock Update</string>
+    <string name="update">Update</string>
+    <string name="park_thc">Park THC</string>
+
+    <!-- LS barcode pickup page -->
+    <string name="label_scan_ls_packages">Scan LS Packages</string>
+    <string name="Scan">SCAN</string>
+    <string name="manually">MANUALLY</string>
+    <string name="tab_pending">PENDING</string>
+    <string name="tab_completed">COMPLETED</string>
+    <string name="lastPkg">Last scan Pkg</string>
+    <string name="label_verify"><u>Verify</u></string>
+    <string name="textcount"><u>00</u></string>
+    <string name="tab_extra" tools:ignore="ButtonCase">EXTRA</string>
+    <string name="awaiting_package_scan">Awaiting Package Scan</string>
+    <string name="label_next_ls_scan">Next</string>
+    <string name="aaaaaaaa">AAAAAAAA</string>
+    <string name="label_finish_ls_scan">FINISH LS SCAN</string>
+    <string name="docket_number">Docket Number…</string>
+    <string name="pending_docket">Pending Docket</string>
+    <string name="pending_barcode">Pending Barcode</string>
+    <string name="extra_docket">Extra Docket</string>
+    <string name="complete_docket">Complete Docket</string>
+    <string name="complete_barcode">Complete Barcode</string>
+    <string name="loading">Loading...</string>
+    <string name="packages">Packages</string>
+    <string name="dockets">Dockets</string>
+    <string name="barcode_serial_number">Barcode Serial Number....</string>
+
+    <!-- THC barcode pickup activity -->
+    <string name="label_scan_thc_packages">Scan THC Packages</string>
+    <string name="label_finish_thc_scan">FINISH THC SCAN</string>
+    <string name="alert">Alert</string>
+    <string name="action_ok">OK</string>
+
+    <!-- PRS Generation activity -->
+    <string name="label_prs_title">PRS Generation</string>
+    <string name="label_veh_no">Vehicle Number</string>
+    <string name="label_book_by">Booked By</string>
+    <string name="label_dock_no">Docket Number</string>
+    <string name="label_or">OR</string>
+    <string name="label_validate_detail">Validate Detail</string>
+
+    <!-- PRS Update activity -->
+    <string name="label_prs_update_title">PRS Update</string>
+    <string name="label_finish_booking_scan">FINISH SCAN</string>
+    <string name="label_back_scan">BACK TO SCAN</string>
+    <string name="label_c_noteno">C Note No</string>
+    <string name="label_scan_pkg">Scan PKG</string>
+
+    <!--Barcode Pickup activity  -->
+    <string name="label_completed_docket">Completed Docket</string>
+    <string name="label_pending_docket">Pending Docket</string>
+    <string name="label_completed_barcode">Completed Barcode</string>
+    <string name="label_pending_barcode">Pending Barcode</string>
+
+    <string name="label_notification_data_sync_in_progress">Data sync in process ...</string>
+
+    <!--DRS Confirmation-->
+    <string name="label_drs_title">DRS Confirmation</string>
+    <string name="label_drs_no">DRS Number</string>
+    <string name="label_docket_no">Docket Number</string>
+    <string name="label_validate_document">Validate Document</string>
+    <string name="label_to_be_scan_summary">To be Scan Summary</string>
+    <string name="label_departed_from">Departed From</string>
+    <string name="label_proceed_to_scan">Proceed To Scan</string>
+    <string name="label_scan_drs_packages">Scan DRS Packages</string>
+    <string name="label_finish_drs_scan">Finish DRS Scan</string>
+    <string name="label_drs_scan_summary">DRS Scan Summary</string>
+
+    <!--Quick Booking-->
+    <string name="label_booking_title">Booking</string>
+    <string name="label_delivery_detail_title">Delivery Details</string>
+    <string name="label_paybasetype">Paybase Type</string>
+    <string name="label_hint_paybasetype">Select Paybase</string>
+    <string name="label_billingparty">Billing Party</string>
+    <string name="label_hint_billingparty">Select Billing Party</string>
+    <string name="label_transportmode">Transport Mode</string>
+    <string name="label_hint_transportmode">Select Transport Mode</string>
+    <string name="label_destination">Destination</string>
+    <string name="label_hint_destination">Select Destination</string>
+    <string name="label_fromcity">From City</string>
+    <string name="label_tocity">To City</string>
+    <string name="label_consigneename">Consignee Name</string>
+    <string name="label_hint_consigneename">Select Consignee</string>
+    <string name="label_invoiceno">Invoice No.</string>
+    <string name="label_hint_invoiceno">Enter Invoice No.</string>
+    <string name="label_product">Product</string>
+    <string name="label_hint_product">Select Product</string>
+    <string name="label_packagetype">Package Type</string>
+    <string name="label_hint_packagetype">Select Package Type</string>
+    <string name="label_noofpkg">Number of PKG</string>
+    <string name="label_declaredvalue">Declared Value</string>
+    <string name="label_actualweight">Actual Weight</string>
+    <string name="label_chargedweight">Charged Weight</string>
+    <string name="label_invoicevalue">Invoice Value</string>
+    <string name="label_addinvoice">Add Invoice</string>
+    <string name="rs">\u20B9 1234</string>
+
+
+</resources>

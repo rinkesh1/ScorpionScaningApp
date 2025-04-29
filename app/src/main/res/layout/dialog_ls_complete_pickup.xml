@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginStart="@dimen/dimen_ten"
+    android:layout_marginEnd="@dimen/dimen_ten"
+    android:background="@drawable/dialog_bg"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/dialog_padding">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:weightSum="10"
+            tools:ignore="UseCompoundDrawables">
+
+            <TextView
+                style="@style/customTextViewHeaderTwo"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/dimen_ten"
+                android:layout_weight="9.3"
+                android:fontFamily="@font/open_sans_semibold"
+                android:gravity="center"
+                android:text="@string/scan_summary"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/dimen_eighteen" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_AlertDismiss"
+                android:layout_width="0dp"
+                android:layout_height="25dp"
+                android:layout_weight="0.7"
+                android:background="@drawable/app_info_close_bg"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:padding="@dimen/dimen_two"
+                android:src="@drawable/app_info_close"
+                tools:ignore="UnusedAttribute" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_one"
+            android:layout_marginTop="@dimen/dimen_fifteen"
+            android:layout_marginBottom="@dimen/dimen_fifteen"
+            android:background="@color/colorHint" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_gravity="center"
+            android:background="@drawable/layout_border"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dimen_fourteen"
+                android:layout_marginEnd="@dimen/dimen_ten"
+                android:fontFamily="@font/open_sans"
+                android:text="@string/lsno"
+                android:textColor="@color/colorHint"
+                android:textSize="@dimen/dimen_twelve" />
+
+            <TextView
+                android:id="@+id/tvAlertLSNo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dimen_fourteen"
+                android:layout_marginTop="@dimen/dimen_three"
+                android:layout_marginEnd="@dimen/dimen_ten"
+                android:layout_marginBottom="@dimen/dimen_five"
+                android:fontFamily="@font/open_sans"
+                android:textColor="@color/black"
+                android:textSize="@dimen/dimen_sixteen" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/dimen_eight"
+            android:baselineAligned="false"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="55dp"
+                android:layout_gravity="center"
+                android:layout_marginEnd="@dimen/dimen_five"
+                android:layout_weight="1"
+                android:background="@drawable/layout_border"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dimen_fourteen"
+                    android:layout_marginEnd="@dimen/dimen_ten"
+                    android:fontFamily="@font/open_sans"
+                    android:text="@string/dockets"
+                    android:textColor="@color/colorHint"
+                    android:textSize="@dimen/dimen_twelve" />
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dimen_fourteen"
+                    android:layout_marginTop="@dimen/dimen_three"
+                    android:layout_marginEnd="@dimen/dimen_ten"
+                    android:layout_marginBottom="@dimen/dimen_five"
+                    android:gravity="start"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvAlertTotalNoOfScannedDockets"
+                        style="@style/customTextHighlighted"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/open_sans"
+                        android:maxLines="1"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/dimen_sixteen" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/customTextHighlighted"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dimen_five"
+                        android:layout_marginRight="@dimen/dimen_five"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/open_sans"
+                        android:maxLines="1"
+                        android:text="/"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/dimen_sixteen" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvAlertTotalNoOfDockets"
+                        style="@style/customTextHighlighted"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/open_sans"
+                        android:maxLines="1"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/dimen_sixteen" />
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="55dp"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/dimen_five"
+                android:layout_weight="1"
+                android:background="@drawable/layout_border"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dimen_fourteen"
+                    android:layout_marginEnd="@dimen/dimen_ten"
+                    android:fontFamily="@font/open_sans"
+                    android:text="@string/packages"
+                    android:textColor="@color/colorHint"
+                    android:textSize="@dimen/dimen_twelve" />
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dimen_fourteen"
+                    android:layout_marginTop="@dimen/dimen_three"
+                    android:layout_marginEnd="@dimen/dimen_ten"
+                    android:layout_marginBottom="@dimen/dimen_five"
+                    android:gravity="start"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvAlertTotalScannedPackages"
+                        style="@style/customTextHighlighted"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/open_sans"
+                        android:maxLines="1"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/dimen_sixteen" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/customTextHighlighted"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dimen_five"
+                        android:layout_marginRight="@dimen/dimen_five"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/open_sans"
+                        android:maxLines="1"
+                        android:text="/"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/dimen_sixteen" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvAlertTotalLoadPackages"
+                        style="@style/customTextHighlighted"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/open_sans"
+                        android:maxLines="1"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/dimen_sixteen" />
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!--<LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/dimen_eight"
+            android:background="@drawable/layout_border"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dimen_fourteen"
+                android:layout_marginEnd="@dimen/dimen_ten"
+                android:fontFamily="@font/open_sans"
+                android:text="@string/unscanned_cn"
+                android:textColor="@color/colorHint"
+                android:textSize="@dimen/dimen_twelve" />
+
+            <TextView
+                android:id="@+id/tvAlertTotalNonScannedDockets"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dimen_fourteen"
+                android:layout_marginTop="@dimen/dimen_three"
+                android:layout_marginEnd="@dimen/dimen_ten"
+                android:layout_marginBottom="@dimen/dimen_five"
+                android:fontFamily="@font/open_sans"
+                android:text="28 Feb 2022"
+                android:textColor="@color/black"
+                android:textSize="@dimen/dimen_sixteen" />
+
+        </LinearLayout>-->
+
+        <LinearLayout
+            android:id="@+id/ll_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_twenty"
+            android:background="@drawable/all_corner_round_drawable"
+            android:baselineAligned="false"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/all_corner_round_drawable"
+                tools:ignore="UselessParent">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvAlertFinalizeAndMakeMF"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:background="@drawable/button_custom"
+                    android:drawableStart="@drawable/check_circle"
+                    android:fontFamily="@font/open_sans_extrabold"
+                    android:gravity="center"
+                    android:maxLines="1"
+                    android:padding="@dimen/dimen_fifteen"
+                    android:singleLine="true"
+                    android:text="@string/finalize_make_MF"
+                    android:textAllCaps="true"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/dimen_fifteen"
+                    tools:ignore="UsingOnClickInXml" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

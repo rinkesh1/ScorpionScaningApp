@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    android:orientation="vertical"
+    tools:context=".activity.DRSConfirmationActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorPrimary"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/ivBackPress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:contentDescription="@string/todo"
+                    android:gravity="center_vertical"
+                    android:src="@drawable/backspace"
+                    tools:ignore="UnusedAttribute" />
+
+                <TextView
+                    style="@style/customTextView_NormalText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dimen_twenty"
+                    android:layout_toEndOf="@+id/ivBackPress"
+                    android:fontFamily="@font/open_sans_semibold"
+                    android:text="@string/label_drs_title"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/dimen_twenty" />
+
+            </RelativeLayout>
+
+        </androidx.appcompat.widget.Toolbar>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/layout_bg"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="@dimen/_6ssp"
+                android:padding="@dimen/_10ssp">
+
+                <LinearLayout
+                    android:background="@color/white"
+                    android:padding="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/til_drs_no"
+                        style="@style/CustomTextInput"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/dimen_three"
+                        android:textColorHint="@color/colorHint">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/et_drsno"
+                            style="@style/customEditText"
+                            android:fontFamily="@font/open_sans"
+                            android:hint="@string/label_drs_no"
+                            android:imeOptions="actionDone"
+                            android:textColor="@color/black"
+                            android:textColorHint="@color/colorHint" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:layout_marginBottom="6dp"
+                        android:gravity="center"
+                        android:text="@string/label_or"
+                        android:visibility="gone" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/til_docket_no"
+                        style="@style/CustomTextInput"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/dimen_three"
+                        android:textColorHint="@color/colorHint">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/et_docketno"
+                            style="@style/customEditText"
+                            android:fontFamily="@font/open_sans"
+                            android:hint="@string/label_docket_no"
+                            android:imeOptions="actionDone"
+                            android:textColor="@color/black"
+                            android:textColorHint="@color/colorHint" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btn_validate_document"
+                        style="@style/customButton"
+                        android:layout_width="match_parent"
+                        android:layout_marginTop="@dimen/_10ssp"
+                        android:background="@drawable/button_bg"
+                        android:fontFamily="@font/open_sans_semibold"
+                        android:text="@string/label_validate_document"
+                        android:textAllCaps="true"
+                        android:textColor="@android:color/white"
+                        tools:ignore="OnClick,UsingOnClickInXml" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_progressbar"
+        android:layout_width="140dp"
+        android:layout_height="110dp"
+        android:layout_centerInParent="true"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/box_bg"
+            android:gravity="center"
+            android:orientation="vertical"
+            tools:ignore="UselessParent">
+
+            <ImageView
+                android:id="@+id/progressbar"
+                android:layout_width="100dp"
+                android:layout_height="80dp"
+                android:background="@color/transparent"
+                android:contentDescription="@string/todo"
+                android:padding="@dimen/dimen_ten"
+                android:src="@drawable/infinityloader"
+                android:visibility="visible" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center_horizontal"
+                android:text="@string/loading"
+                android:textColor="@color/material_black"
+                android:textSize="@dimen/dimen_fifteen" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

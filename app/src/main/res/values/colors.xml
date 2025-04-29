@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="blue_50">#E3F2FD</color>
+    <color name="blue_100">#BBDEFB</color>
+    <color name="blue_200">#90CAF9</color>
+    <color name="blue_300">#64B5F6</color>
+    <color name="blue_400">#42A5F5</color>
+    <color name="blue_500">#2196F3</color>
+    <color name="blue_600">#1E88E5</color>
+    <color name="blue_700">#1976D2</color>
+    <color name="blue_800">#1565C0</color>
+    <color name="blue_900">#0D47A1</color>
+    <color name="blue_A100">#82B1FF</color>
+    <color name="blue_A200">#448AFF</color>
+    <color name="blue_A400">#2979FF</color>
+    <color name="blue_A700">#2962FF</color>
+
+    <!-- Primary Color -->
+    <color name="colorPrimary">#45537B</color>
+    <color name="colorPrimaryDark">#64A4E9</color>
+    <color name="colorAccent">#c82506</color>
+    <color name="transparent">#00000000</color>
+    <color name="colorPrimaryDark_Transparent">#80000000</color>
+    <color name="StatusBarTransparent">#6F7EAC</color>
+    <color name="navTransparent">#B5C0DF</color>
+    <color name="navbgTransparent">#65759E</color>
+
+    <!-- Splash Page Color -->
+    <color name="splash_bg">#F1F5F8</color>
+
+    <!-- Register Page Color -->
+    <color name="register_login_bg">#F1F5F8</color>
+    <color name="colorHint">#929292</color>
+    <color name="colorLabel">#000000</color>
+
+    <!-- Main Page Color -->
+    <color name="layout_bg">#F1F5F8</color>
+
+    <!-- dialog need help -->
+    <color name="bg">#F1F5F8</color>
+
+    <!-- dialog ls complete pickup -->
+    <color name="material_black">#212121</color>
+    <color name="Spinner_text_view_hint_color">#D5D6D8</color>
+    <color name="attempted_color">#E0DAA843</color>
+    <color name="colorDeliveredTabText">#028102</color>
+    <color name="colorOpenTabText">#C00202</color>
+    <color name="color_blue">#4039fa</color>
+    <color name="penRoyalBlue">#4169e1</color>
+
+    <color name="colorlabel">#000000</color>
+    <color name="colorDivider">#ccc</color>
+
+    <color name="grey_3">#f7f7f7</color>
+    <color name="grey_5">#f2f2f2</color>
+    <color name="grey_10">#e6e6e6</color>
+    <color name="grey_20">#cccccc</color>
+    <color name="grey_40">#999999</color>
+    <color name="grey_60">#666666</color>
+    <color name="grey_80">#37474F</color>
+    <color name="grey_90">#263238</color>
+    <color name="grey_95">#1a1a1a</color>
+    <color name="grey_100_">#0d0d0d</color>
+
+    <color name="green">#32CD32</color>
+    <color name="orange">#FF5F1F</color>
+
+</resources>

@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cv_root"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="@dimen/dimen_fifteen"
+    android:layout_marginTop="@dimen/dimen_ten"
+    android:layout_marginRight="@dimen/dimen_fifteen"
+    android:layout_marginBottom="@dimen/dimen_ten"
+    android:backgroundTint="@color/white"
+    android:clickable="true"
+    android:focusable="true"
+    android:foreground="?android:attr/selectableItemBackground"
+    app:cardCornerRadius="@dimen/dimen_card_corner_radius"
+    app:cardElevation="@dimen/dimen_card_elivation_value">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/dimen_eight"
+            android:paddingTop="@dimen/dimen_eight"
+            android:paddingRight="@dimen/dimen_eight"
+            android:weightSum="10">
+
+            <TextView
+                android:id="@+id/tv_manifestNo"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="9"
+                android:fontFamily="@font/open_sans_semibold"
+                android:gravity="center|start"
+                android:textColor="@color/black"
+                android:textSize="@dimen/dimen_sixteen"
+                tools:ignore="NestedWeights" />
+
+            <ImageView
+                android:id="@+id/iv_forwardArrow"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:contentDescription="@string/todo"
+                android:src="@mipmap/ic_arrow_forward" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/dimen_eight"
+            android:paddingTop="@dimen/dimen_five"
+            android:paddingRight="@dimen/dimen_eight">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/title_docketNo"
+                android:layout_width="115dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:ellipsize="end"
+                android:fontFamily="@font/open_sans"
+                android:maxLines="1"
+                android:padding="@dimen/dimen_three"
+                android:text="@string/docket_no"
+                android:textColor="@color/colorLabel"
+                android:textSize="@dimen/dimen_text_medium" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_docketNo"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:fontFamily="@font/open_sans_semibold"
+                android:maxLines="1"
+                android:padding="@dimen/dimen_three"
+                android:text=""
+                android:textColor="@color/colorLabel"
+                android:textSize="@dimen/dimen_text_medium" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/dimen_eight"
+            android:paddingRight="@dimen/dimen_eight">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/title_totalPkgs"
+                android:layout_width="115dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:ellipsize="end"
+                android:fontFamily="@font/open_sans"
+                android:maxLines="1"
+                android:padding="@dimen/dimen_three"
+                android:text="@string/total_load_packages"
+                android:textColor="@color/colorLabel"
+                android:textSize="@dimen/dimen_text_medium" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_totalPkgs"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:fontFamily="@font/open_sans_semibold"
+                android:padding="@dimen/dimen_three"
+                android:text=""
+                android:textColor="@color/colorLabel"
+                android:textSize="@dimen/dimen_text_medium" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/dimen_eight"
+            android:paddingRight="@dimen/dimen_eight">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/title_scanPkgs"
+                android:layout_width="115dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:ellipsize="end"
+                android:fontFamily="@font/open_sans"
+                android:maxLines="1"
+                android:padding="@dimen/dimen_three"
+                android:text="@string/total_scanned_packages"
+                android:textColor="@color/colorLabel"
+                android:textSize="@dimen/dimen_text_medium" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_scanPkgs"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:fontFamily="@font/open_sans_semibold"
+                android:padding="@dimen/dimen_three"
+                android:text=""
+                android:textColor="@color/colorLabel"
+                android:textSize="@dimen/dimen_text_medium" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/dimen_eight"
+            android:paddingRight="@dimen/dimen_eight"
+            android:paddingBottom="@dimen/dimen_ten">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/title_manifestStatus"
+                android:layout_width="115dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:ellipsize="end"
+                android:fontFamily="@font/open_sans"
+                android:maxLines="1"
+                android:padding="@dimen/dimen_three"
+                android:text="@string/manifest_status"
+                android:textColor="@color/colorLabel"
+                android:textSize="@dimen/dimen_text_medium"
+                android:visibility="gone" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_manifestStatus"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:fontFamily="@font/open_sans_semibold"
+                android:padding="@dimen/dimen_three"
+                android:text=""
+                android:textColor="@color/colorLabel"
+                android:textSize="@dimen/dimen_text_medium"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

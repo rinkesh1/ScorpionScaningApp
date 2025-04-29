@@ -1,0 +1,588 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    android:orientation="vertical"
+    tools:context=".activity.QuickBookingActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorPrimary"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/ivBackPress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:contentDescription="@string/todo"
+                    android:gravity="center_vertical"
+                    android:src="@drawable/backspace"
+                    tools:ignore="UnusedAttribute" />
+
+                <TextView
+                    style="@style/customTextView_NormalText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dimen_twenty"
+                    android:layout_toEndOf="@+id/ivBackPress"
+                    android:fontFamily="@font/open_sans_semibold"
+                    android:text="@string/label_booking_title"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/dimen_twenty" />
+
+            </RelativeLayout>
+
+        </androidx.appcompat.widget.Toolbar>
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_below="@+id/toolbar"
+            android:layout_above="@+id/ll_submit"
+            android:id="@+id/nsview"
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:background="@drawable/layout_bg"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+
+                <TextView
+                    style="@style/customTextView_NormalText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dimen_twenty"
+                    android:fontFamily="@font/open_sans_semibold"
+                    android:text="@string/label_delivery_detail_title"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/dimen_fifteen" />
+
+                <androidx.cardview.widget.CardView
+                    android:layout_marginTop="@dimen/_10ssp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="@dimen/_6ssp"
+                    android:padding="@dimen/_10ssp">
+
+                    <LinearLayout
+                        android:background="@color/white"
+                        android:padding="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/til_paybasetype"
+                            style="@style/CustomTextInput"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/dimen_three"
+                            android:textColorHint="@color/colorPrimary"
+                            app:expandedHintEnabled="false"
+                            android:hint="@string/label_paybasetype">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/et_paybasetype"
+                                style="@style/customEditText"
+                                android:fontFamily="@font/open_sans"
+                                android:hint="@string/label_hint_paybasetype"
+                                android:drawableRight="@drawable/ic_arrow_drop_down"
+                                android:focusableInTouchMode="false"
+                                android:imeOptions="actionDone"
+                                android:textColor="@color/black"
+                                android:editable="false"
+                                android:textColorHint="@color/colorHint"
+                                tools:ignore="Deprecated" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/til_billingparty"
+                            style="@style/CustomTextInput"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/dimen_three"
+                            android:textColorHint="@color/colorPrimary"
+                            app:expandedHintEnabled="false"
+                            android:hint="@string/label_billingparty">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/et_billingparty"
+                                style="@style/customEditText"
+                                android:fontFamily="@font/open_sans"
+                                android:hint="@string/label_hint_billingparty"
+                                android:drawableRight="@drawable/ic_arrow_drop_down"
+                                android:focusableInTouchMode="false"
+                                android:imeOptions="actionDone"
+                                android:textColor="@color/black"
+                                android:editable="false"
+                                android:textColorHint="@color/colorHint"
+                                tools:ignore="Deprecated" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/til_transportmode"
+                            style="@style/CustomTextInput"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/dimen_three"
+                            android:textColorHint="@color/colorPrimary"
+                            app:expandedHintEnabled="false"
+                            android:hint="@string/label_transportmode">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/et_transportmode"
+                                style="@style/customEditText"
+                                android:fontFamily="@font/open_sans"
+                                android:hint="@string/label_hint_transportmode"
+                                android:drawableRight="@drawable/ic_arrow_drop_down"
+                                android:focusableInTouchMode="false"
+                                android:imeOptions="actionDone"
+                                android:textColor="@color/black"
+                                android:editable="false"
+                                android:textColorHint="@color/colorHint"
+                                tools:ignore="Deprecated" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/til_destination"
+                            style="@style/CustomTextInput"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/dimen_three"
+                            android:textColorHint="@color/colorPrimary"
+                            app:expandedHintEnabled="false"
+                            android:hint="@string/label_destination">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/et_destination"
+                                style="@style/customEditText"
+                                android:fontFamily="@font/open_sans"
+                                android:hint="@string/label_hint_destination"
+                                android:drawableRight="@drawable/ic_arrow_drop_down"
+                                android:focusableInTouchMode="false"
+                                android:imeOptions="actionDone"
+                                android:textColor="@color/black"
+                                android:editable="false"
+                                android:textColorHint="@color/colorHint"
+                                tools:ignore="Deprecated" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_marginTop="@dimen/_10ssp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="@dimen/_6ssp"
+                    android:padding="@dimen/_10ssp">
+
+                    <LinearLayout
+                        android:background="@color/white"
+                        android:padding="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                      <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/til_fromcity"
+                            style="@style/CustomTextInput"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/dimen_three"
+                            android:textColorHint="@color/colorPrimary"
+                            app:expandedHintEnabled="false"
+                            android:hint="@string/label_fromcity">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/et_fromcity"
+                                style="@style/customEditText"
+                                android:fontFamily="@font/open_sans"
+                                android:hint=""
+                                android:drawableRight="@drawable/ic_arrow_drop_down"
+                                android:focusableInTouchMode="false"
+                                android:imeOptions="actionDone"
+                                android:textColor="@color/black"
+                                android:editable="false"
+                                android:textColorHint="@color/colorHint"
+                                tools:ignore="Deprecated" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/til_tocity"
+                            style="@style/CustomTextInput"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/dimen_three"
+                            android:textColorHint="@color/colorPrimary"
+                            app:expandedHintEnabled="false"
+                            android:hint="@string/label_tocity">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/et_tocity"
+                                style="@style/customEditText"
+                                android:fontFamily="@font/open_sans"
+                                android:hint=""
+                                android:drawableRight="@drawable/ic_arrow_drop_down"
+                                android:focusableInTouchMode="false"
+                                android:imeOptions="actionDone"
+                                android:textColor="@color/black"
+                                android:editable="false"
+                                android:textColorHint="@color/colorHint"
+                                tools:ignore="Deprecated" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/til_consigneename"
+                            style="@style/CustomTextInput"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/dimen_three"
+                            android:textColorHint="@color/colorPrimary"
+                            app:expandedHintEnabled="false"
+                            android:hint="@string/label_consigneename">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/et_consigneename"
+                                style="@style/customEditText"
+                                android:fontFamily="@font/open_sans"
+                                android:hint="@string/label_hint_consigneename"
+                                android:drawableRight="@drawable/ic_arrow_drop_down"
+                                android:focusableInTouchMode="false"
+                                android:imeOptions="actionDone"
+                                android:textColor="@color/black"
+                                android:editable="false"
+                                android:textColorHint="@color/colorHint"
+                                tools:ignore="Deprecated" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_marginTop="@dimen/_10ssp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="@dimen/_6ssp"
+                    android:padding="@dimen/_10ssp">
+
+                    <LinearLayout
+                        android:background="@color/white"
+                        android:padding="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/rv_invoice"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/_10ssp"/>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/til_invoiceno"
+                            style="@style/CustomTextInput"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/dimen_three"
+                            android:textColorHint="@color/colorPrimary"
+                            app:expandedHintEnabled="false"
+                            android:hint="@string/label_invoiceno">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/et_invoiceno"
+                                style="@style/customEditText"
+                                android:fontFamily="@font/open_sans"
+                                android:hint="@string/label_hint_invoiceno"
+                                android:imeOptions="actionDone"
+                                android:textColor="@color/black"
+                                android:textColorHint="@color/colorHint"
+                                tools:ignore="Deprecated" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/til_product"
+                            style="@style/CustomTextInput"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/dimen_three"
+                            android:textColorHint="@color/colorPrimary"
+                            app:expandedHintEnabled="false"
+                            android:hint="@string/label_product">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/et_product"
+                                style="@style/customEditText"
+                                android:fontFamily="@font/open_sans"
+                                android:hint="@string/label_hint_product"
+                                android:drawableRight="@drawable/ic_arrow_drop_down"
+                                android:focusableInTouchMode="false"
+                                android:imeOptions="actionDone"
+                                android:textColor="@color/black"
+                                android:editable="false"
+                                android:textColorHint="@color/colorHint"
+                                tools:ignore="Deprecated" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/til_packagetype"
+                            style="@style/CustomTextInput"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/dimen_three"
+                            android:textColorHint="@color/colorPrimary"
+                            app:expandedHintEnabled="false"
+                            android:hint="@string/label_packagetype">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/et_packagetype"
+                                style="@style/customEditText"
+                                android:fontFamily="@font/open_sans"
+                                android:hint="@string/label_hint_packagetype"
+                                android:drawableRight="@drawable/ic_arrow_drop_down"
+                                android:focusableInTouchMode="false"
+                                android:imeOptions="actionDone"
+                                android:textColor="@color/black"
+                                android:editable="false"
+                                android:textColorHint="@color/colorHint"
+                                tools:ignore="Deprecated" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:layout_weight="1"
+                                android:id="@+id/til_noofpkg"
+                                style="@style/CustomTextInput"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="@dimen/dimen_three"
+                                android:textColorHint="@color/colorPrimary"
+                                app:expandedHintEnabled="false"
+                                android:hint="@string/label_noofpkg">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/et_noofpkg"
+                                    style="@style/customEditText"
+                                    android:fontFamily="@font/open_sans"
+                                    android:hint="0"
+                                    android:imeOptions="actionDone"
+                                    android:textColor="@color/black"
+                                    android:textColorHint="@color/colorHint"
+                                    tools:ignore="Deprecated" />
+
+                            </com.google.android.material.textfield.TextInputLayout>
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:layout_weight="1"
+                                android:layout_marginLeft="@dimen/_10ssp"
+                                android:id="@+id/til_declaredvalue"
+                                style="@style/CustomTextInput"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="@dimen/dimen_three"
+                                android:textColorHint="@color/colorPrimary"
+                                app:expandedHintEnabled="false"
+                                android:hint="@string/label_declaredvalue">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/et_declaredvalue"
+                                    style="@style/customEditText"
+                                    android:fontFamily="@font/open_sans"
+                                    android:hint="0"
+                                    android:imeOptions="actionDone"
+                                    android:textColor="@color/black"
+                                    android:textColorHint="@color/colorHint"
+                                    tools:ignore="Deprecated" />
+
+                            </com.google.android.material.textfield.TextInputLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:layout_weight="1"
+                                android:id="@+id/til_actualweight"
+                                style="@style/CustomTextInput"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="@dimen/dimen_three"
+                                android:textColorHint="@color/colorPrimary"
+                                app:expandedHintEnabled="false"
+                                android:hint="@string/label_actualweight">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/et_actualweight"
+                                    style="@style/customEditText"
+                                    android:fontFamily="@font/open_sans"
+                                    android:hint="0"
+                                    android:imeOptions="actionDone"
+                                    android:textColor="@color/black"
+                                    android:textColorHint="@color/colorHint"
+                                    tools:ignore="Deprecated" />
+
+                            </com.google.android.material.textfield.TextInputLayout>
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:layout_weight="1"
+                                android:layout_marginLeft="@dimen/_10ssp"
+                                android:id="@+id/til_chargedweight"
+                                style="@style/CustomTextInput"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="@dimen/dimen_three"
+                                android:textColorHint="@color/colorPrimary"
+                                app:expandedHintEnabled="false"
+                                android:hint="@string/label_chargedweight">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/et_chargedweight"
+                                    style="@style/customEditText"
+                                    android:fontFamily="@font/open_sans"
+                                    android:hint="0"
+                                    android:imeOptions="actionDone"
+                                    android:textColor="@color/black"
+                                    android:textColorHint="@color/colorHint"
+                                    tools:ignore="Deprecated" />
+
+                            </com.google.android.material.textfield.TextInputLayout>
+                        </LinearLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/til_invoicevalue"
+                            style="@style/CustomTextInput"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/dimen_three"
+                            android:textColorHint="@color/colorPrimary"
+                            app:expandedHintEnabled="false"
+                            android:hint="@string/label_invoicevalue">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/et_invoicevalue"
+                                style="@style/customEditText"
+                                android:fontFamily="@font/open_sans"
+                                android:hint="0"
+                                android:imeOptions="actionDone"
+                                android:textColor="@color/black"
+                                android:textColorHint="@color/colorHint"
+                                tools:ignore="Deprecated" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <Button
+                    android:id="@+id/btn_addInvoice"
+                    android:layout_marginTop="@dimen/_10ssp"
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/label_addinvoice"
+                    android:drawableLeft="@drawable/ic_add"/>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnPOD"
+                    android:layout_marginTop="@dimen/_10ssp"
+                    android:layout_gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_30ssp"
+                    android:insetLeft="0dp"
+                    android:insetTop="0dp"
+                    android:insetRight="0dp"
+                    android:insetBottom="0dp"
+                    app:icon="@drawable/ic_camera"
+                    app:iconGravity="textStart"
+                    app:iconPadding="0dp" />
+
+
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+        <LinearLayout
+            android:layout_alignParentBottom="true"
+            android:id="@+id/ll_submit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white">
+            <androidx.appcompat.widget.AppCompatButton
+                style="@style/customButton"
+                android:background="@color/colorPrimary"
+                android:layout_marginBottom="-05dp"
+                android:id="@+id/btnSubmit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="SUBMIT"/>
+        </LinearLayout>
+
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_progressbar"
+        android:layout_width="140dp"
+        android:layout_height="110dp"
+        android:layout_centerInParent="true"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/box_bg"
+            android:gravity="center"
+            android:orientation="vertical"
+            tools:ignore="UselessParent">
+
+            <ImageView
+                android:id="@+id/progressbar"
+                android:layout_width="100dp"
+                android:layout_height="80dp"
+                android:background="@color/transparent"
+                android:contentDescription="@string/todo"
+                android:padding="@dimen/dimen_ten"
+                android:src="@drawable/infinityloader"
+                android:visibility="visible" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center_horizontal"
+                android:text="@string/loading"
+                android:textColor="@color/material_black"
+                android:textSize="@dimen/dimen_fifteen" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

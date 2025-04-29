@@ -1,0 +1,359 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.VerifyTHCSummaryActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorPrimary"
+        android:orientation="vertical">
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/ivBackPress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:contentDescription="@string/todo"
+                    android:gravity="center_vertical"
+                    android:src="@drawable/backspace"
+                    tools:ignore="UnusedAttribute" />
+
+                <TextView
+                    style="@style/customTextView_NormalText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dimen_twenty"
+                    android:layout_toEndOf="@+id/ivBackPress"
+                    android:fontFamily="@font/open_sans_semibold"
+                    android:text="@string/thc_summery"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/dimen_twenty" />
+
+            </RelativeLayout>
+
+        </androidx.appcompat.widget.Toolbar>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@drawable/layout_bg_scan"
+            android:orientation="vertical">
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cvPickupTask"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:foreground="?android:attr/selectableItemBackground"
+                app:cardCornerRadius="@dimen/dimen_eight"
+                app:cardElevation="@dimen/dimen_three"
+                app:cardUseCompatPadding="true"
+                app:contentPadding="@dimen/dimen_five">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/dimen_five"
+                    android:orientation="vertical"
+                    android:padding="@dimen/dimen_five">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/tv_label_drop_seq"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="5dp"
+                        android:layout_marginBottom="10dp"
+                        android:ellipsize="end"
+                        android:background="@drawable/all_corner_round_baground_drawable"
+                        android:gravity="center"
+                        android:maxLines="1"
+                        android:text="DEPS Details"
+                        android:textColor="@color/colorlabel"
+                        android:textSize="16sp"
+                        />
+
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/tv_label_store"
+                            android:layout_width="0dp"
+                            android:layout_height="1dp"
+                            android:layout_weight="1.1"
+                            android:background="@drawable/bottom_right_border_table_cell"
+                            android:maxLines="1"
+                            android:padding="10dp"
+                            android:text=""
+                            android:textColor="@color/colorlabel"
+                            android:textSize="14sp" />
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/tv_label_order"
+                            android:layout_width="0dp"
+                            android:layout_height="1dp"
+                            android:layout_weight="0.7"
+                            android:background="@drawable/bottom_right_border_table_cell"
+                            android:gravity="center"
+                            android:maxLines="1"
+                            android:padding="10dp"
+                            android:singleLine="true"
+                            android:text=""
+                            android:textColor="@color/colorlabel"
+                            android:textSize="14sp" />
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/tv_label_qty"
+                            android:layout_width="0dp"
+                            android:layout_height="1dp"
+                            android:layout_weight="0.7"
+                            android:background="@drawable/bottom_border_table_cell"
+                            android:gravity="center"
+                            android:maxLines="1"
+                            android:padding="@dimen/dimen_ten"
+                            android:singleLine="true"
+                            android:text=""
+                            android:textColor="@color/colorlabel"
+                            android:textSize="@dimen/dimen_medium" />
+
+                    </TableRow>
+                    <TableRow xmlns:android="http://schemas.android.com/apk/res/android"
+                        xmlns:app="http://schemas.android.com/apk/res-auto"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1.1"
+                            android:background="@drawable/bottom_right_border_table_cell"
+                            android:maxLines="1"
+                            android:padding="@dimen/dimen_ten"
+                            android:text="Scan Packages"
+                            android:textColor="@color/colorlabel"
+                            android:textSize="@dimen/dimen_medium"
+                            android:textStyle="bold"
+                            />
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/txt_ScanVerify"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.7"
+                            android:background="@drawable/bottom_right_border_table_cell"
+                            android:gravity="right"
+                            android:padding="@dimen/dimen_ten"
+                            android:text="@string/label_verify"
+                            android:textColor="@color/penRoyalBlue"
+                            android:textSize="@dimen/dimen_medium"
+                            android:textStyle="bold"
+                            />
+
+                    </TableRow>
+                    <TableRow xmlns:android="http://schemas.android.com/apk/res/android"
+                        xmlns:app="http://schemas.android.com/apk/res-auto"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1.1"
+                            android:background="@drawable/bottom_right_border_table_cell"
+                            android:maxLines="1"
+                            android:padding="@dimen/dimen_ten"
+                            android:text="Short Packages"
+                            android:textColor="@color/colorlabel"
+                            android:textSize="@dimen/dimen_medium"
+                            android:textStyle="bold"
+                            />
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/txt_SortVerify"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.7"
+                            android:background="@drawable/bottom_right_border_table_cell"
+                            android:gravity="right"
+                            android:padding="@dimen/dimen_ten"
+                            android:text="@string/label_verify"
+                            android:textColor="@color/penRoyalBlue"
+                            android:textSize="@dimen/dimen_medium"
+                            android:textStyle="bold"
+                            />
+
+                    </TableRow>
+                    <TableRow xmlns:android="http://schemas.android.com/apk/res/android"
+                        xmlns:app="http://schemas.android.com/apk/res-auto"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1.1"
+                            android:background="@drawable/bottom_right_border_table_cell"
+                            android:maxLines="1"
+                            android:padding="@dimen/dimen_ten"
+                            android:text="Damage Packages"
+                            android:textColor="@color/colorlabel"
+                            android:textSize="@dimen/dimen_medium"
+                            android:textStyle="bold"
+                            />
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/txt_damageVerify"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.7"
+                            android:background="@drawable/bottom_right_border_table_cell"
+                            android:gravity="right"
+                            android:padding="@dimen/dimen_ten"
+                            android:text="@string/label_verify"
+                            android:textColor="@color/penRoyalBlue"
+                            android:textSize="@dimen/dimen_medium"
+                            android:textStyle="bold"
+                            />
+
+                    </TableRow>
+                    <TableRow xmlns:android="http://schemas.android.com/apk/res/android"
+                        xmlns:app="http://schemas.android.com/apk/res-auto"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1.1"
+                            android:background="@drawable/bottom_right_border_table_cell"
+                            android:maxLines="1"
+                            android:padding="@dimen/dimen_ten"
+                            android:text="Excess Packages"
+                            android:textColor="@color/colorlabel"
+                            android:textSize="@dimen/dimen_medium"
+                            android:textStyle="bold"
+                            />
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/txt_ExtraVerify"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.7"
+                            android:background="@drawable/bottom_right_border_table_cell"
+                            android:gravity="right"
+                            android:padding="@dimen/dimen_ten"
+                            android:text="@string/label_verify"
+                            android:textColor="@color/penRoyalBlue"
+                            android:textSize="@dimen/dimen_medium"
+                            android:textStyle="bold"
+                            />
+
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/tv_label_total"
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            android:layout_weight="1.1"
+                            android:background="@drawable/top_right_border_table_cell"
+                            android:gravity="right"
+                            android:padding="@dimen/dimen_ten"
+                            android:text=""
+                            android:textColor="@color/colorlabel"
+                            android:textSize="@dimen/dimen_medium" />
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/tv_totalqty_value"
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            android:layout_weight="0.7"
+                            android:background="@drawable/top_border_table_cell"
+                            android:gravity="right"
+                            android:padding="@dimen/dimen_ten"
+                            android:text=""
+                            android:textColor="@color/colorlabel"
+                            android:textSize="@dimen/dimen_medium"
+                            />
+
+                    </TableRow>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/Sm_StockUpdate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/custom_button"
+            android:fontFamily="@font/open_sans_extrabold"
+            android:gravity="center"
+            android:maxLines="1"
+            android:padding="@dimen/dimen_fifteen"
+            android:singleLine="true"
+            android:text="@string/stock_update"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textSize="@dimen/dimen_fifteen"
+            tools:ignore="UsingOnClickInXml" />
+    </LinearLayout>
+    <RelativeLayout
+        android:id="@+id/rl_progressbar"
+        android:layout_width="140dp"
+        android:layout_height="110dp"
+        android:layout_centerInParent="true"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/box_bg"
+            android:gravity="center"
+            android:orientation="vertical"
+            tools:ignore="UselessParent">
+            <ProgressBar
+                android:id="@+id/pbHeaderProgress"
+                style="?android:attr/progressBarStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+            </ProgressBar>
+            <ImageView
+                android:id="@+id/progressbar"
+                android:layout_width="100dp"
+                android:layout_height="80dp"
+                android:background="@color/transparent"
+                android:contentDescription="@string/todo"
+                android:padding="@dimen/dimen_ten"
+                android:src="@drawable/infinityloader"
+                android:visibility="gone" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center_horizontal"
+                android:text="@string/loading"
+                android:textColor="@color/material_black"
+                android:textSize="@dimen/dimen_fifteen" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+</RelativeLayout>

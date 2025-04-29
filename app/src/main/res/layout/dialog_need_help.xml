@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginStart="@dimen/dimen_ten"
+    android:layout_marginEnd="@dimen/dimen_ten"
+    android:background="@drawable/dialog_bg"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_five"
+        android:fontFamily="@font/open_sans"
+        android:text="@string/selecting_a_company"
+        android:textColor="@color/black"
+        android:textSize="@dimen/dimen_eighteen" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_eight"
+        android:fontFamily="@font/open_sans"
+        android:text="@string/this_app_needs_to_know_the_company_you_work_for_in_order_to_complete_its_setup"
+        android:textColor="@color/black"
+        android:textSize="@dimen/dimen_sixteen" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/dimen_twenty_five"
+        android:backgroundTint="@color/bg"
+        android:elevation="@dimen/dimen_three"
+        app:cardCornerRadius="@dimen/dimen_ten"
+        tools:targetApi="lollipop">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/dimen_twelve"
+            android:fontFamily="@font/open_sans"
+            android:text="@string/abcd"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="@dimen/dimen_forty" />
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/dimen_fifteen"
+        android:layout_marginTop="@dimen/dimen_eight"
+        android:fontFamily="@font/open_sans"
+        android:text="@string/if_you_haven_t_received_it_by_sms_ask_your_admin_team_for_a_3_6_digit_code"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="@dimen/dimen_sixteen" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_one"
+        android:layout_marginTop="@dimen/dimen_fifteen"
+        android:layout_marginBottom="@dimen/dimen_fifteen"
+        android:background="@color/colorHint" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_five"
+        android:fontFamily="@font/open_sans"
+        android:text="@string/note_you_cannot_search_your_company_using_its_name_for_security_reasons"
+        android:textColor="@color/black"
+        android:textSize="@dimen/dimen_sixteen" />
+
+    <LinearLayout
+        android:id="@+id/NH_done"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_twenty"
+        android:gravity="end">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/open_sans_semibold"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:text="@string/done"
+            android:layout_marginEnd="@dimen/dimen_five"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="@dimen/dimen_sixteen"
+            tools:ignore="UnusedAttribute" />
+
+    </LinearLayout>
+
+</LinearLayout>
